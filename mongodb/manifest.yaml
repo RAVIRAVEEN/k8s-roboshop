@@ -21,11 +21,10 @@ spec:
         project: roboshop
         tier: db
     spec:
-    imagePullPolicy: Always
     containers:
       - name:  mongodb
         image: raviraveen/mongodb:v1
-        
+        imagePullPolicy: Always
 
 ---
 apiVersion: v1
