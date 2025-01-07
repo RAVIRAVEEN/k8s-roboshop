@@ -14,7 +14,6 @@ spec:
       app:  user
       project: roboshop
       tier: app
-
   template:
     metadata:
       labels:
@@ -22,14 +21,13 @@ spec:
         project: roboshop
         tier: app   
     spec:
-     imagePullPolicy: Always
      containers:
       - name:  user
         image: raviraveen/user:v1
+        imagePullPolicy: Always
         envFrom:
           - configMapRef:
             name: user
-
 ---
 apiVersion: v1
 kind: ConfigMap
@@ -38,17 +36,18 @@ metadata:
 data: 
  MONGO:  "true"
 
-
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  namespace: roboshop
   name: user
-  app: user
-  project: roboshop
-  tier: app
+  namespace: roboshop
+spec:  
+  selector:
+    app: user
+    project: roboshop
+    tier: app
   ports:
-    - protocol: TCP
-      port: 8080 #service port
-      targetPort: 8080  #container port
+  - protocol: TCP
+    port: 8080 #service port
+    targetPort: 8080 #container port
