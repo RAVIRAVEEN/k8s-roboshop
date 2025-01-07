@@ -45,11 +45,11 @@ metadata:
   namespace: roboshop
   name: cart
 spec:  
-selector:
+  selector:
     app: cart
     project: roboshop
     tier: app
-    ports:
+  ports:
      - protocol: TCP
        port: 8080 #service port
        targetPort: 8080  #container port
