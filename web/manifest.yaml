@@ -106,7 +106,7 @@ spec:
         app: web
         project: roboshop
         tier: web
-    spec:
+  spec:
       containers:
       - name: web
         image: raviraveen1/web:v1
@@ -116,7 +116,7 @@ spec:
            mountPath: /etc/nginx/nginx.conf
            subPath: nginx.conf
            readOnly: true
-    volumes:
+  volumes:
     - name: nginx.conf
       configMap:
         name: web
