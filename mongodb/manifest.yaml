@@ -15,12 +15,12 @@ spec:
       project: roboshop
       tier: db
   template:
-  metadata:
+    metadata:
       labels:
         app: mongodb
         project: roboshop
         tier: db
-      spec:
+    spec:
       containers:
        - name:  mongodb
          image: raviraveen1/mongodb:v1
