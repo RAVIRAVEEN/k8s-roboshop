@@ -22,9 +22,9 @@ spec:
         tier: db
     spec:
       containers:
-      - name:  mongodb
-        image: raviraveen1/mongodb:v1
-        imagePullPolicy: Always
+       - name:  mongodb
+         image: raviraveen1/mongodb:v1
+         imagePullPolicy: Always
 
 ---
 apiVersion: v1
