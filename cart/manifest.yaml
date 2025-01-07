@@ -28,7 +28,7 @@ spec:
         imagePullPolicy: Always
         envFrom:
           - configMapRef:
-            name: cart
+             name: cart
 ---
 apiVersion: v1
 kind: ConfigMap
