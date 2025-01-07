@@ -25,10 +25,9 @@ spec:
         - name:  catalogue
           image: raviraveen1/catalogue:v1
           imagePullPolicy: Always
-       envFrom:
-         - configMapRef:
-           name: catalogue
-
+          envFrom:
+          - configMapRef:
+            name: catalogue
 ---
 apiVersion: v1
 kind: ConfigMap
