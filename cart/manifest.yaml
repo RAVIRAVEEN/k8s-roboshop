@@ -22,10 +22,10 @@ spec:
         project: roboshop
         tier: app   
     spec:
-     imagePullPolicy: Always
      containers:
       - name:  cart
         image: raviraveen/cart:v1
+        imagePullPolicy: Always
         envFrom:
           - configMapRef:
             name: cart
@@ -44,11 +44,12 @@ kind: Service
 metadata:
   namespace: roboshop
   name: cart
+spec:  
 selector:
     app: cart
     project: roboshop
     tier: app
     ports:
-    - protocol: TCP
-      port: 8080 #service port
-      targetPort: 8080  #container port
+     - protocol: TCP
+       port: 8080 #service port
+       targetPort: 8080  #container port
