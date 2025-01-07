@@ -15,12 +15,12 @@ spec:
       project: roboshop
       tier: db
   template:
-    metadata:
+  metadata:
       labels:
         app: mongodb
         project: roboshop
         tier: db
-    spec:
+      spec:
       containers:
        - name:  mongodb
          image: raviraveen1/mongodb:v1
@@ -32,11 +32,11 @@ kind: Service
 metadata:
   name: mongodb
   namespace: roboshop
-selector:
+  selector:
     app: mongodb
     project: roboshop
     tier: db
-ports:
+  ports:
     - protocol: TCP
       port: 27017 #service port
       targetPort: 27017  #container port
