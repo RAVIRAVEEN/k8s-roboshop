@@ -33,6 +33,7 @@ kind: Service
 metadata:
   name: redis
   namespace: roboshop
+spec:  
   selector:
     app: redis
     project: roboshop
