@@ -108,23 +108,23 @@ spec:
         tier: web
     spec:
       containers:
-       - name: web
-         image: raviraveen1/web:v1
-         imagePullPolicy: Always
-         volumeMounts:
-         - name: nginx.conf
-           mountPath: /etc/nginx/nginx.conf
-           subPath: nginx.conf
-           readOnly: true
+      - name: web
+        image: raviraveen1/web:v1
+        imagePullPolicy: Always
+        volumeMounts:
+            - name: nginx-conf
+              mountPath: /etc/nginx/nginx.conf
+              subPath: nginx.conf
+              readOnly: true
       volumes:
-      - name: nginx.conf
+      - name: nginx-conf
         configMap:
           name: web
           items:
             - key: nginx.conf
-              path: nginx.conf 
+              path: nginx.conf
 
----
+---             
 apiVersion: v1
 kind: Service
 metadata:
