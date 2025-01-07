@@ -35,8 +35,9 @@ kind: ConfigMap
 metadata:
   name: cart
 data: 
- MONGO:  "true"
-
+  REDIS_HOST: "redis"
+  CATALOGUE_HOST: "catalogue"
+  CATALOGUE_PORT: "8080"
 
 ---
 apiVersion: v1
