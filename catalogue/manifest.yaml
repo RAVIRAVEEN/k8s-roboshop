@@ -27,7 +27,7 @@ spec:
           imagePullPolicy: Always
           envFrom:
           - configMapRef:
-            name: catalogue
+             name: catalogue
 ---
 apiVersion: v1
 kind: ConfigMap
