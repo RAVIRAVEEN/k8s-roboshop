@@ -34,7 +34,7 @@ metadata:
   selector:
     app: mongodb
     project: roboshop
-    tier: app
+    tier: db
   ports:
   - protocol: TCP
     port: 27017 #service port
