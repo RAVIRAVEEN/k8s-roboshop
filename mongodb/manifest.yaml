@@ -7,7 +7,7 @@ metadata:
     app: mongodb
     project: roboshop
     tier: db
-  spec:
+spec:
   replicas: 1
   selector:
     matchLabels:
@@ -20,8 +20,8 @@ metadata:
         app: mongodb
         project: roboshop
         tier: db
-    spec:
-     containers:
+      spec:
+      containers:
       - name:  mongodb
         image: raviraveen1/mongodb:v1
         imagePullPolicy: Always
