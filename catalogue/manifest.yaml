@@ -1,8 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-name: catalogue
-namespace: roboshop
+  name: catalogue
+  namespace: roboshop
   labels:
     app: catalogue
     project: roboshop
@@ -14,7 +14,6 @@ spec:
       app:  catalogue
       project: roboshop
       tier: app
-
   template:
     metadata:
       labels:
