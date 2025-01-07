@@ -41,15 +41,15 @@ spec:
         tier: db
     spec:
       containers:
-       - name:  mysql
-         image: raviraveen1/mysql:v1
-         imagePullPolicy: Always
-         envFrom:
-          - secretRef:
-             name: mysql
-            envFrom:
-              - configMapRef:
-                 name: mysql
+      - name:  mysql
+        image: raviraveen1/mysql:v1
+        imagePullPolicy: Always
+        envFrom:
+         - secretRef:
+            name: mysql
+           envFrom:
+            - configMapRef:
+               name: mysql
 ---
 
 ---
